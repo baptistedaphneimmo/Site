@@ -130,7 +130,7 @@
     .about { background: var(--navy2); }
     .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; margin-top: 3rem; }
     .about-photo-area { position: relative; }
-    .about-photo { width: 100%; aspect-ratio: 4/5; background: linear-gradient(160deg, rgba(200,151,58,.12), rgba(27,43,75,.8)); border-radius: 16px; display: flex; flex-direction: column; align-items: center; justify-content: center; border: 1px dashed rgba(200,151,58,.25); font-size: .85rem; color: rgba(255,255,255,.25); text-align: center; padding: 2rem; gap: .5rem; }
+    .about-photo { width: 100%; height: 100%; object-fit: cover; object-position: center; aspect-ratio: 4/5; background: linear-gradient(160deg, rgba(200,151,58,.12), rgba(27,43,75,.8)); border-radius: 16px; display: flex; flex-direction: column; align-items: center; justify-content: center; border: 1px dashed rgba(200,151,58,.25); font-size: .85rem; color: rgba(255,255,255,.25); text-align: center; padding: 2rem; gap: .5rem; }
     .about-badge { position: absolute; bottom: -1.5rem; right: -1.5rem; background: var(--gold); color: var(--navy); border-radius: 12px; padding: 1.2rem 1.6rem; font-weight: 700; font-size: .88rem; line-height: 1.5; box-shadow: 0 8px 24px rgba(200,151,58,.3); }
     .about-text blockquote { font-family: 'Playfair Display', serif; font-size: 1.25rem; font-style: italic; color: var(--gold); border-left: 3px solid var(--gold); padding-left: 1.5rem; margin: 2rem 0; line-height: 1.6; }
     .about-text p { font-size: .92rem; color: rgba(255,255,255,.6); line-height: 1.8; margin-bottom: 1rem; }
@@ -182,6 +182,9 @@
 
     /* ── RESPONSIVE ── */
     @media (max-width: 900px) {
+      .about-grid {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
       .hero { grid-template-columns: 1fr; text-align: center; }
       .hero-sub, .hero-stat { margin-left: auto; margin-right: auto; }
       .hero-actions { justify-content: center; }
