@@ -238,6 +238,12 @@
 
   gtag('config', 'AW-17870834052');
 </script>
+  <!-- Google tag (gtag.js) event -->
+<script>
+  gtag('event', 'ads_conversion_Prise_de_rendez_vous_1', {
+    // <event_parameters>
+  });
+</script>
 </head>
 <body>
 
@@ -537,6 +543,16 @@
   <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
 </div>
 </section>
+   <!-- Tracking conversion Calendly → Google Ads -->
+    <script>
+      window.addEventListener("message", function (e) {
+        if (e.data.event && e.data.event === "calendly.event_scheduled") {
+          gtag('event', 'conversion', {
+            'send_to': 'AW-17870834052'
+          });
+        }
+      });
+    </script>
 
 <!-- ═══ CONTACT BAR ═══ -->
 <div class="contact-bar">
