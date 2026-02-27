@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Politique de Confidentialité – Baptiste & Daphné Immobilier</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="icon" href="/favicon.png" type="image/png">
+  <style>
+    :root {
+      --navy:  #1B2B4B;
+      --navy2: #162240;
+      --gold:  #c9a96e;
+      --white: #FFFFFF;
+      --grey:  #8A9AB5;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Montserrat', sans-serif; background: var(--navy); color: var(--white); overflow-x: hidden; }
+
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.2rem 5%;
+      background: rgba(27,43,75,0.94);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(200,151,58,0.2);
+    }
+    .nav-logo { font-family: 'Merriweather', serif; font-size: 1.1rem; color: var(--white); letter-spacing: .04em; text-decoration: none; }
+    .nav-logo span { color: var(--gold); }
+    .nav-back { font-size: .85rem; color: rgba(255,255,255,.6); text-decoration: none; font-weight: 500; letter-spacing: .06em; text-transform: uppercase; transition: color .25s; }
+    .nav-back:hover { color: var(--gold); }
+
+    .page-hero {
+      padding: 9rem 5% 4rem;
+      background: var(--navy2);
+      border-bottom: 1px solid rgba(200,151,58,.15);
+      position: relative; overflow: hidden;
+    }
+    .page-hero::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse 60% 80% at 80% 50%, rgba(200,151,58,.06), transparent 70%);
+      pointer-events: none;
+    }
+    .page-hero .eyebrow { font-size: .75rem; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 1rem; }
+    .page-hero h1 { font-family: 'Merriweather', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 900; margin-bottom: .8rem; }
+    .page-hero .date { font-size: .82rem; color: var(--grey); }
+
+    .content { max-width: 800px; margin: 0 auto; padding: 5rem 5%; }
+
+    .section-block { margin-bottom: 3rem; }
+    .section-block h2 {
+      font-family: 'Merriweather', serif; font-size: 1.3rem; font-weight: 700;
+      color: var(--gold); margin-bottom: 1rem; padding-bottom: .6rem;
+      border-bottom: 1px solid rgba(200,151,58,.2);
+    }
+    .section-block h3 { font-size: 1rem; font-weight: 600; color: var(--white); margin: 1.2rem 0 .6rem; }
+    .section-block p { font-size: .92rem; color: rgba(255,255,255,.7); line-height: 1.85; margin-bottom: .8rem; }
+    .section-block a { color: var(--gold); text-decoration: none; }
+    .section-block a:hover { text-decoration: underline; }
+    .info-card {
+      background: rgba(255,255,255,.03); border: 1px solid rgba(200,151,58,.2);
+      border-radius: 10px; padding: 1.5rem 2rem; margin: .8rem 0;
+    }
+    .info-card p { margin: 0; font-size: .9rem; }
+    .info-card p + p { margin-top: .5rem; }
+    .tag {
+      display: inline-block; font-size: .72rem; font-weight: 600; letter-spacing: .1em;
+      text-transform: uppercase; background: rgba(200,151,58,.15); color: var(--gold);
+      border: 1px solid rgba(200,151,58,.3); border-radius: 4px; padding: .2rem .6rem;
+      margin-bottom: .6rem;
+    }
+    .rights-grid { display: grid; grid-template-columns: 1fr 1fr; gap: .8rem; margin-top: 1rem; }
+    .right-item { background: rgba(255,255,255,.03); border: 1px solid rgba(255,255,255,.08); border-radius: 8px; padding: 1rem 1.2rem; font-size: .87rem; color: rgba(255,255,255,.7); }
+    .right-item strong { display: block; color: var(--white); margin-bottom: .2rem; font-size: .9rem; }
+
+    @media (max-width: 600px) {
+      .rights-grid { grid-template-columns: 1fr; }
+      .content { padding: 3rem 5%; }
+    }
+
+    footer { background: var(--navy2); border-top: 1px solid rgba(255,255,255,.06); padding: 2.5rem 5%; display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; }
+    .footer-logo { font-family: 'Merriweather', serif; font-size: 1rem; white-space: nowrap; }
+    .footer-logo span { color: var(--gold); }
+    footer p { font-size: .73rem; color: var(--grey); max-width: 660px; line-height: 1.7; }
+    .footer-links { display: flex; gap: 1.5rem; flex-wrap: wrap; margin-top: .5rem; }
+    .footer-links a { font-size: .75rem; color: var(--grey); text-decoration: none; transition: color .2s; }
+    .footer-links a:hover { color: var(--gold); }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Baptiste &amp; Daphné <span>Immobilier</span></a>
+  <a href="index.html" class="nav-back">← Retour au site</a>
+</nav>
+
+<div class="page-hero">
+  <span class="eyebrow">RGPD & Données personnelles</span>
+  <h1>Politique de Confidentialité</h1>
+  <span class="date">Dernière mise à jour : février 2026</span>
+</div>
+
+<div class="content">
+
+  <div class="section-block">
+    <h2>1. Responsable du traitement</h2>
+    <p>Les responsables du traitement des données personnelles collectées via ce site sont :</p>
+    <div class="info-card">
+      <p><strong>Baptiste AUDOUIN</strong> &amp; <strong>Daphné MARTIN MARIN GUILLON</strong></p>
+      <p>Mandataires indépendants IAD France — RSAC Chambéry</p>
+      <p>Contact : <a href="tel:0610327493">06 10 32 74 93</a></p>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <h2>2. Données collectées et finalités</h2>
+
+    <h3>📊 Google Analytics 4</h3>
+    <span class="tag">Mesure d'audience</span>
+    <p>Google Analytics collecte automatiquement des données de navigation : adresse IP anonymisée, pages visitées, durée de session, type de navigateur et d'appareil, pays d'origine.</p>
+    <p>Ces données servent uniquement à analyser l'audience du site afin d'en améliorer le contenu et l'expérience utilisateur. Aucune donnée permettant de vous identifier personnellement n'est conservée.</p>
+
+    <h3>📣 Google Ads</h3>
+    <span class="tag">Publicité & conversion</span>
+    <p>Google Ads utilise des cookies publicitaires pour mesurer l'efficacité des campagnes et vous proposer des annonces pertinentes. Les données collectées peuvent inclure vos interactions avec les publicités et votre parcours de navigation.</p>
+
+    <h3>🎥 Microsoft Clarity</h3>
+    <span class="tag">Analyse comportementale</span>
+    <p>Microsoft Clarity enregistre les sessions de navigation (mouvements de souris, clics, scrolls) sous forme de heatmaps et de replays anonymisés. Ces données nous aident à améliorer l'ergonomie du site. Aucune donnée personnelle identifiable n'est transmise.</p>
+
+    <h3>📅 Calendly</h3>
+    <span class="tag">Prise de rendez-vous</span>
+    <p>Lorsque vous réservez un rendez-vous via le widget Calendly intégré à ce site, les données que vous saisissez (nom, adresse email, éventuellement téléphone) sont transmises directement à Calendly et traitées selon leur propre politique de confidentialité.</p>
+    <p>Nous ne stockons pas ces données sur nos propres serveurs. Nous y accédons uniquement via l'interface Calendly pour gérer vos rendez-vous.</p>
+  </div>
+
+  <div class="section-block">
+    <h2>3. Base légale du traitement</h2>
+    <div class="info-card">
+      <p><strong>Google Analytics & Ads, Microsoft Clarity</strong> → Consentement préalable (art. 6.1.a RGPD), recueilli via le bandeau de cookies lors de votre première visite.</p>
+      <p style="margin-top:.6rem"><strong>Calendly</strong> → Exécution d'une démarche précontractuelle à votre initiative (art. 6.1.b RGPD).</p>
+    </div>
+    <p>Vous pouvez retirer votre consentement à tout moment en cliquant sur « Gérer mes cookies » en bas de page.</p>
+  </div>
+
+  <div class="section-block">
+    <h2>4. Sous-traitants & transferts hors UE</h2>
+
+    <div class="info-card">
+      <p><strong>Google LLC</strong> — Analytics &amp; Ads</p>
+      <p>1600 Amphitheatre Parkway, Mountain View, CA 94043, USA</p>
+      <p>Transfert encadré par les clauses contractuelles types (CCT) approuvées par la Commission européenne.</p>
+      <p><a href="https://policies.google.com/privacy" target="_blank">Politique de confidentialité Google →</a></p>
+    </div>
+
+    <div class="info-card" style="margin-top:.8rem">
+      <p><strong>Microsoft Corporation</strong> — Clarity</p>
+      <p>One Microsoft Way, Redmond, WA 98052, USA</p>
+      <p>Transfert encadré par les CCT. Données anonymisées avant tout traitement.</p>
+      <p><a href="https://privacy.microsoft.com/fr-fr/privacystatement" target="_blank">Politique de confidentialité Microsoft →</a></p>
+    </div>
+
+    <div class="info-card" style="margin-top:.8rem">
+      <p><strong>Calendly LLC</strong></p>
+      <p>271 17th St NW, Suite 1000, Atlanta, GA 30363, USA</p>
+      <p>Transfert encadré par les CCT.</p>
+      <p><a href="https://calendly.com/privacy" target="_blank">Politique de confidentialité Calendly →</a></p>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <h2>5. Durée de conservation</h2>
+    <div class="info-card">
+      <p><strong>Google Analytics</strong> : 26 mois (paramètre par défaut)</p>
+      <p><strong>Google Ads</strong> : 90 jours pour les cookies de conversion</p>
+      <p><strong>Microsoft Clarity</strong> : 13 mois</p>
+      <p><strong>Calendly</strong> : selon les conditions de Calendly (consultez leur politique)</p>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <h2>6. Vos droits</h2>
+    <p>Conformément au RGPD (articles 15 à 22), vous disposez des droits suivants :</p>
+    <div class="rights-grid">
+      <div class="right-item"><strong>Accès</strong>Obtenir une copie de vos données</div>
+      <div class="right-item"><strong>Rectification</strong>Corriger des données inexactes</div>
+      <div class="right-item"><strong>Effacement</strong>Demander la suppression de vos données</div>
+      <div class="right-item"><strong>Limitation</strong>Restreindre un traitement en cours</div>
+      <div class="right-item"><strong>Portabilité</strong>Récupérer vos données dans un format lisible</div>
+      <div class="right-item"><strong>Opposition</strong>S'opposer à un traitement basé sur intérêt légitime</div>
+    </div>
+    <p style="margin-top:1.2rem">Pour exercer ces droits, contactez-nous au <a href="tel:0610327493">06 10 32 74 93</a>.</p>
+    <p>Vous pouvez également introduire une réclamation auprès de la <a href="https://www.cnil.fr" target="_blank">CNIL (www.cnil.fr)</a>.</p>
+  </div>
+
+  <div class="section-block">
+    <h2>7. Gestion des cookies</h2>
+    <p>Vous pouvez gérer ou retirer votre consentement à tout moment :</p>
+    <p>→ Via le <a href="cookies.html">bandeau de gestion des cookies</a> disponible en bas de chaque page.<br/>
+    → Via votre navigateur (paramètres > confidentialité).<br/>
+    → Directement auprès de Google : <a href="https://tools.google.com/dlpage/gaoptout" target="_blank">désactiver Google Analytics</a> — <a href="https://adssettings.google.com" target="_blank">gérer les préférences Google Ads</a>.</p>
+  </div>
+
+  <div class="section-block">
+    <h2>8. Modifications</h2>
+    <p>Cette politique peut être mise à jour à tout moment pour refléter des changements légaux ou techniques. La date de mise à jour est indiquée en haut du document. Nous vous encourageons à la consulter régulièrement.</p>
+  </div>
+
+</div>
+
+<footer>
+  <div>
+    <div class="footer-logo">Baptiste &amp; Daphné <span>Immobilier</span></div>
+    <div class="footer-links">
+      <a href="mentions-legales.html">Mentions légales</a>
+      <a href="politique-confidentialite.html">Politique de confidentialité</a>
+      <a href="cookies.html">Gestion des cookies</a>
+    </div>
+  </div>
+  <p>EI Daphné MARTIN MARIN GUILLON, EI Baptiste AUDOUIN — Mandataires indépendants IAD France — Document non contractuel — Février 2026</p>
+</footer>
+
+</body>
+</html>
