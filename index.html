@@ -249,6 +249,111 @@
   .calendly-wrapper { height: 520px; }
   .nav-cta {  font-size: .75rem; padding: .4rem .8rem; white-space: nowrap;}
 }
+
+    #cookie-banner {
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 9999;
+  background: linear-gradient(135deg, #0d1a30 0%, #162240 100%);
+  border-top: 1px solid rgba(201,169,110,.35);
+  box-shadow: 0 -12px 48px rgba(0,0,0,.6);
+  transform: translateY(110%);
+  transition: transform .5s cubic-bezier(.22,1,.36,1);
+  padding: 1.6rem 5%;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 2rem; flex-wrap: wrap;
+}
+#cookie-banner.visible { transform: translateY(0); }
+
+.banner-left { flex: 1; min-width: 240px; }
+
+.banner-left .banner-icon {
+  font-size: 1.4rem; margin-bottom: .4rem; display: block;
+}
+.banner-left strong {
+  display: block; font-size: 1rem; font-weight: 700;
+  color: #fff; margin-bottom: .4rem; letter-spacing: .01em;
+}
+.banner-left p {
+  font-size: .78rem; color: rgba(255,255,255,.5); line-height: 1.6; margin: 0;
+}
+.banner-left p a { color: #c9a96e; text-decoration: none; }
+.banner-left p a:hover { text-decoration: underline; }
+
+/* ── Highlight "analyser" pour valoriser l'intérêt du visiteur ── */
+.banner-left p em {
+  font-style: normal; color: rgba(255,255,255,.75); font-weight: 500;
+}
+
+.banner-right {
+  display: flex; flex-direction: column; align-items: flex-end;
+  gap: .6rem; flex-shrink: 0;
+}
+
+/* ── Boutons principaux ── */
+.banner-btns-row {
+  display: flex; gap: .7rem; align-items: center;
+}
+
+/* ACCEPTER — plein, doré, lumineux, légèrement plus grand */
+.btn-banner-accept {
+  background: linear-gradient(135deg, #d4b06a 0%, #c9a96e 60%, #b8954f 100%);
+  color: #1B2B4B;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800; font-size: .88rem; letter-spacing: .04em;
+  padding: .75rem 1.8rem;
+  border-radius: 6px; border: none; cursor: pointer;
+  box-shadow: 0 4px 18px rgba(201,169,110,.35);
+  transition: box-shadow .2s, transform .2s, filter .2s;
+  white-space: nowrap;
+}
+.btn-banner-accept:hover {
+  box-shadow: 0 6px 28px rgba(201,169,110,.55);
+  transform: translateY(-1px);
+  filter: brightness(1.07);
+}
+
+/* REFUSER — outline sobre, même taille (obligation CNIL) */
+.btn-banner-refuse {
+  background: transparent;
+  color: rgba(255,255,255,.45);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500; font-size: .88rem;
+  padding: .75rem 1.2rem;
+  border-radius: 6px;
+  border: 1px solid rgba(255,255,255,.15);
+  cursor: pointer;
+  transition: color .2s, border-color .2s;
+  white-space: nowrap;
+}
+.btn-banner-refuse:hover {
+  color: rgba(255,255,255,.75);
+  border-color: rgba(255,255,255,.3);
+}
+
+/* PERSONNALISER — lien texte discret en dessous */
+.btn-banner-custom {
+  background: none; border: none; cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-size: .72rem; color: rgba(255,255,255,.3);
+  text-decoration: underline; text-underline-offset: 3px;
+  padding: 0; transition: color .2s;
+  align-self: center;
+}
+.btn-banner-custom:hover { color: rgba(255,255,255,.55); }
+
+/* ── Petit texte de réassurance sous les boutons ── */
+.banner-reassurance {
+  font-size: .68rem; color: rgba(255,255,255,.2);
+  text-align: right; line-height: 1.4;
+}
+
+@media (max-width: 640px) {
+  #cookie-banner { flex-direction: column; align-items: flex-start; padding: 1.4rem 5%; }
+  .banner-right { align-items: flex-start; width: 100%; }
+  .banner-btns-row { width: 100%; }
+  .btn-banner-accept { flex: 1; text-align: center; }
+  .btn-banner-refuse { flex: 1; text-align: center; }
+  .banner-reassurance { text-align: left; }
+}
   </style>
 
 
