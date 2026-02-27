@@ -121,35 +121,6 @@
     .cookie-table tr:hover td { background: rgba(255,255,255,.02); }
     .cookie-table code { font-size: .8rem; background: rgba(255,255,255,.06); padding: .1rem .4rem; border-radius: 3px; color: var(--gold); }
 
-    /* ── BANDEAU (inclus pour copier dans index.html) ── */
-    .bandeau-preview { margin: 3rem 0; }
-    .bandeau-preview h2 { font-family: 'Merriweather', serif; font-size: 1.3rem; color: var(--gold); margin-bottom: 1rem; padding-bottom: .6rem; border-bottom: 1px solid rgba(200,151,58,.2); }
-    .bandeau-preview p { font-size: .9rem; color: rgba(255,255,255,.65); margin-bottom: 1.5rem; }
-
-    /* ── COOKIE BANNER (à copier dans index.html) ── */
-    #cookie-banner {
-      position: fixed; bottom: 0; left: 0; right: 0; z-index: 9999;
-      background: var(--navy2);
-      border-top: 1px solid rgba(200,151,58,.3);
-      padding: 1.4rem 5%;
-      display: flex; align-items: center; justify-content: space-between;
-      gap: 1.5rem; flex-wrap: wrap;
-      box-shadow: 0 -8px 32px rgba(0,0,0,.4);
-      transform: translateY(0); transition: transform .4s ease;
-    }
-    #cookie-banner.hidden { transform: translateY(110%); }
-    .banner-text { flex: 1; min-width: 260px; }
-    .banner-text strong { display: block; font-size: .95rem; margin-bottom: .3rem; }
-    .banner-text p { font-size: .8rem; color: rgba(255,255,255,.55); line-height: 1.6; }
-    .banner-text a { color: var(--gold); text-decoration: none; }
-    .banner-actions { display: flex; gap: .7rem; flex-wrap: wrap; align-items: center; }
-    .banner-btn-accept { background: var(--gold); color: var(--navy); font-weight: 700; font-size: .85rem; padding: .65rem 1.4rem; border-radius: 4px; border: none; cursor: pointer; white-space: nowrap; transition: opacity .2s; font-family: 'Montserrat', sans-serif; }
-    .banner-btn-accept:hover { opacity: .85; }
-    .banner-btn-refuse { background: transparent; color: rgba(255,255,255,.6); font-size: .85rem; padding: .65rem 1.2rem; border-radius: 4px; border: 1px solid rgba(255,255,255,.2); cursor: pointer; white-space: nowrap; transition: color .2s, border-color .2s; font-family: 'Montserrat', sans-serif; }
-    .banner-btn-refuse:hover { color: var(--white); border-color: rgba(255,255,255,.4); }
-    .banner-btn-custom { background: transparent; color: var(--gold); font-size: .85rem; padding: .65rem 1.2rem; border-radius: 4px; border: 1px solid rgba(200,151,58,.35); cursor: pointer; white-space: nowrap; font-family: 'Montserrat', sans-serif; transition: background .2s; }
-    .banner-btn-custom:hover { background: rgba(200,151,58,.1); }
-
     footer { background: var(--navy2); border-top: 1px solid rgba(255,255,255,.06); padding: 2.5rem 5%; display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; }
     .footer-logo { font-family: 'Merriweather', serif; font-size: 1rem; white-space: nowrap; }
     .footer-logo span { color: var(--gold); }
@@ -316,19 +287,6 @@
     </p>
   </div>
 
-</div>
-
-<!-- ══ COOKIE BANNER (à copier dans index.html, avant </body>) ══ -->
-<div id="cookie-banner" class="hidden">
-  <div class="banner-text">
-    <strong>🍪 Ce site utilise des cookies</strong>
-    <p>Nous utilisons Google Analytics, Google Ads et Microsoft Clarity pour analyser l'audience et améliorer le site. Vos données sont anonymisées. <a href="cookies.html">En savoir plus</a></p>
-  </div>
-  <div class="banner-actions">
-    <button class="banner-btn-accept" onclick="bannerAccept()">Tout accepter</button>
-    <button class="banner-btn-refuse" onclick="bannerRefuse()">Tout refuser</button>
-    <button class="banner-btn-custom" onclick="window.location.href='cookies.html'">Personnaliser</button>
-  </div>
 </div>
 
 <footer>
