@@ -180,10 +180,13 @@
     .contact-bar .sep { width: 1px; height: 40px; background: rgba(27,43,75,.2); }
 
     /* ── FOOTER ── */
-    footer { background: var(--navy2); border-top: 1px solid rgba(255,255,255,.06); padding: 2.5rem 5%; display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; }
+    .footer { background: var(--navy2); border-top: 1px solid rgba(255,255,255,.06); padding: 2.5rem 5%; display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; }
     .footer-logo { font-family: 'Merriweather', serif; font-size: 1rem; white-space: nowrap; }
     .footer-logo span { color: var(--gold); }
     footer p { font-size: .73rem; color: var(--grey); max-width: 660px; line-height: 1.7; }
+    .footer-links { display: flex; gap: 1.5rem; flex-wrap: wrap; margin-top: .5rem; }
+    .footer-links a { font-size: .75rem; color: var(--grey); text-decoration: none; transition: color .2s; }
+    .footer-links a:hover { color: var(--gold); }
 
     /* ── ANIMATIONS ── */
     @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
