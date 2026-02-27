@@ -847,14 +847,22 @@ input:disabled + .slider { cursor: not-allowed; opacity: .5; }
     })(window,document,"clarity","script","vnvyypfvt5");
   }
 
-  function logToSheet(prefs, decision) {
-    if if (!APPS_SCRIPT_URL) return;
-    fetch(APPS_SCRIPT_URL, { method: 'POST', body: JSON.stringify({
-      sessionId: getSessionId(), analytics: prefs.analytics,
-      ads: prefs.ads, clarity: prefs.clarity,
-      policyVersion: 'v1', page: window.location.pathname, decision: decision
-    })}).catch(function(){});
-  }
+function logToSheet(prefs, decision) {
+  if (!APPS_SCRIPT_URL) return;
+  fetch(APPS_SCRIPT_URL, {
+    method: 'POST',
+    mode: 'no-cors',
+    body: JSON.stringify({
+      sessionId: getSessionId(),
+      analytics: prefs.analytics,
+      ads: prefs.ads,
+      clarity: prefs.clarity,
+      policyVersion: 'v1',
+      page: window.location.pathname,
+      decision: decision
+    })
+  }).catch(function(){});
+}
 
   function applyAndLog(prefs, decision) {
     localStorage.setItem(CONSENT_KEY, JSON.stringify(Object.assign({}, prefs, { ts: Date.now() })));
